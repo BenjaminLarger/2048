@@ -1,0 +1,139 @@
+/* Parent container to center the grid */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full viewport height */
+  margin: 0; /* Remove default margin */
+  background-color: #faf8ef; /* Background color for the page */
+  font-family: 'Arial', sans-serif; /* Universal font for consistency */
+}
+
+/* Main Grid Container */
+.grid-container {
+  display: grid;                         /* Enable grid layout */
+  grid-template-columns: repeat(4, 1fr);  /* Create 4 equal columns */
+  grid-template-rows: repeat(4, 1fr);     /* Create 4 equal rows */
+  gap: 10px;                             /* Space between cells */
+  width: 400px;                          /* Fixed width */
+  height: 400px;                         /* Fixed height */
+  background-color: #bbada0;             /* Grid background color */
+  border-radius: 10px;                   /* Rounded corners */
+  padding: 10px;                         /* Padding around cells */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Slight shadow for depth */
+  transition: transform 0.2s ease;        /* Smooth transition for hover effect */
+}
+
+/* Empty Grid Cells */
+.grid-cell {
+  background-color: #cdc1b4;             /* Default cell color */
+  border-radius: 5px;                    /* Rounded edges */
+  display: flex;                         /* Center content */
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;                       /* Default font size */
+  font-weight: bold;
+  color: #776e65;                        /* Default text color */
+  transition: transform 0.1s ease, background-color 0.2s ease; /* Smooth transitions */
+}
+
+/* Hover effect for grid cells */
+.grid-cell:hover {
+  transform: scale(1.05);                /* Slight zoom effect on hover */
+  background-color: #d0c4a2;             /* Slight color change on hover */
+}
+
+/* Score and Restart Buttons */
+#restart-btn, #restart-btn-end {
+  background-color: #8f7a66;             /* Tomato color for fun */
+  color: #f9f6f2;                        /* Light text color */
+  font-size: 2.5rem;
+  font-weight: bold;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;                   /* Rounded corners */
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  transition: background-color 0.3s, transform 0.2s ease; /* Smooth transition for hover effect */
+}
+
+/* Hover effect for buttons */
+#restart-btn:hover, #restart-btn-end:hover {
+  background-color: #ffbf5e;             /* Darker shade on hover */
+  transform: scale(1.1);                  /* Slightly enlarge on hover */
+}
+
+/* Title Styling */
+#title {
+  font-size: 3rem;                       /* Larger font size */
+  color: #8f7a66;                        /* Orange-red color */
+  background-color: #ffffff;             /* Light khaki background */
+  padding: 10px 20px;                    /* Padding for better spacing */
+  border-radius: 10px;                   /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+  text-align: center;                    /* Centered text */
+  transition: transform 0.2s ease;        /* Smooth transition for hover effect */
+  margin: 0 0 10px 0;
+}
+
+/* Score Styling */
+#score {
+  position: absolute;                    /* Absolute positioning */
+  top: 10px;                             /* Distance from the top */
+  left: 10px;                            /* Distance from the left */
+  font-size: 2.5rem;                     /* Slightly larger font */
+  color: #ffffff;                           /* Text color */
+  font-weight: bold;
+  background-color: #8f7a66;             /* Light khaki background */
+  padding: 10px 20px;                    /* Padding for better spacing */
+  border-radius: 10px;                   /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+  text-align: center;                    /* Centered text */
+  margin-top: 0;                         /* Remove top margin */
+}
+
+/* Media Query for Small Screens */
+@media (max-width: 500px) {
+  .grid-container {
+    width: 300px;
+    height: 300px;
+    gap: 5px;
+  }
+  
+  .grid-cell {
+    font-size: 18px;                      /* Smaller font size on small screens */
+  }
+}
+
+/* Popup Styling */
+.popup {
+  display: none;                         /* Popup hidden by default */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);  /* Dark transparent background */
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.3s ease;         /* Smooth transition for opacity */
+}
+
+/* Popup Content */
+.popup-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  width: 300px;
+  max-width: 90%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+}
+
+/* Hidden class to hide popup */
+.hidden {
+  display: none;
+}

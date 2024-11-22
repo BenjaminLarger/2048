@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2048 Game</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="game-container">
+    <h1 id="title"> 2048</h1>
+    <div class="score-container">
+      <span id="score">Score: 0</span>
+      <button id="restart-btn">Restart</button>
+    </div>
+    <div class="grid-container">
+    <!-- The grid will be filled by JavaScript -->
+    </div>
+  </div>
+  <!-- Display popup -->
+  <div id="popup" class="popup hidden">
+    <div class="popup-content">
+      <h2>Game Over</h2>
+      <p id="popup-message"> </p>
+      <button id="restart-btn-end">Restart</button>
+    </div>
+  </div>
+  <script src="utils/grid.js"></script>
+  <script src="utils/movement.js"></script>
+  <script src="utils/merge.js"></script>
+  <script src="utils/score.js"></script>
+  <script src="script.js"></script> 
+</body>
+</html>

@@ -6,7 +6,6 @@ function addRandomTile() {
   
   const randomCell = emptyCells[Math.floor(Math.random() * emptyCells.length)];
   randomCell.textContent = Math.random() < 0.9 ? 2 : 4; // Add 2 or 4 randomly
-  //randomCell.style.backgroundColor = getTileColor(Number(randomCell.textContent)); // Optional: Style tile
 }
 
 
